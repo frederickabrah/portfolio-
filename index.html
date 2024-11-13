@@ -339,7 +339,7 @@
             <div class="skill-card" data-aos="fade-up">
                 <i class="fas fa-code skill-icon"></i>
                 <h3>Web Development</h3>
-                <p>HTML, CSS, JavaScript</p>
+                <p>HTML, CSS, Javascript, Django, Nodejs</p>
                 <div class="progress-bar">
                     <div class="progress" style="width: 90%"></div>
                 </div>
@@ -347,7 +347,7 @@
             <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
                 <i class="fab fa-python skill-icon"></i>
                 <h3>Python</h3>
-                <p>Django, Flask, Automation</p>
+                <p>Django, Flask, Automation, Softwares</p>
                 <div class="progress-bar">
                     <div class="progress" style="width: 85%"></div>
                 </div>
@@ -355,7 +355,7 @@
             <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
                 <i class="fas fa-laptop-code skill-icon"></i>
                 <h3>Software Development</h3>
-                <p>Desktop Applications, APIs</p>
+                <p>Desktop Applications, APIs, Cybersecurity Tools, Hacking Tools</p>
                 <div class="progress-bar">
                     <div class="progress" style="width: 80%"></div>
                 </div>
@@ -393,7 +393,7 @@
             <div class="project-card" data-aos="fade-up" data-aos-delay="400">
                 <img src="https://picsum.photos/800/600?random=3" alt="Project 3" class="project-image">
                 <div class="project-content">
-                    <h3 class="project-title">AI Chat Bot</h3>
+                    <h3 class="project-title">Ai Chat Bot</h3>
                     <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Machine Learning</span>
@@ -402,24 +402,85 @@
                     <p>An intelligent chatbot using natural language processing.</p>
                 </div>
             </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://picsum.photos/800/600?random=3" alt="Project 3" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">StopMotion Animation Software</h3>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">PIL</span>
+                    </div>
+                    <p>A Advance StopMotion tool for StopMotion animation artiste.</p>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://picsum.photos/800/600?random=3" alt="Project 3" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Face detector ALogarithm</h3>
+                    <div class="project-tags">
+                        <span class="tag">Tkinter</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <p>A Face detector aLogarithm for multiple use.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="section" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <form class="contact-form" data-aos="fade-up">
-            <div class="form-group">
-                <input type="text" class="form-input" placeholder="Your Name">
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-input" placeholder="Your Email">
-            </div>
-            <div class="form-group">
-                <textarea class="form-input" rows="5" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-    </section>
+    <h2 class="section-title">Get In Touch</h2>
+    <form class="contact-form" data-aos="fade-left" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+            <input type="text" class="form-input" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-input" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <textarea class="form-input" id="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</section>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Create email body with formatting
+    const emailBody = `
+Hello Abraham,
+
+You have received a new message from your portfolio website:
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+Best regards,
+${name}
+    `.trim();
+    
+    // Create mailto link with pre-filled fields
+    const mailtoLink = `mailto:frederickabraham547@gmail.com?subject=Portfolio Contact Form: Message from ${name}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    document.getElementById('contactForm').reset();
+}
+</script>
 
     <script>
         // Initialize AOS
@@ -428,7 +489,7 @@
         // Particles.js Configuration
         particlesJS("particles-js", {
             particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
+                number: { value: 140, density: { enable: true, value_area: 800 } },
                 color: { value: "#6C5CE7" },
                 shape: { type: "circle" },
                 opacity: { value: 0.5, random: false },
@@ -449,7 +510,7 @@
 
         // Typed.js
         new Typed('.typed-text', {
-            strings: ['Web Developer', 'Python Programmer', 'Software Developer'],
+            strings: ['Web Developer', 'Python Programmer', 'Software Developer', 'Cybersecurity Expert'],
             typeSpeed: 50,
             backSpeed: 30,
             loop: true
